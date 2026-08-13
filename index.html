@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Cheat Sheet</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f6f8fa;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: #24292e;
+            color: #fff;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        h1 { margin: 0; font-size: 2rem; }
+        h2 { color: #24292e; border-bottom: 2px solid #e1e4e8; padding-bottom: 8px; margin-top: 30px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { background: #fff; padding: 15px; border: 1px solid #e1e4e8; border-radius: 6px; }
+        .card h3 { margin-top: 0; color: #0366d6; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; background: #fff; }
+        th, td { text-align: left; padding: 12px; border: 1px solid #e1e4e8; }
+        th { background-color: #f1f8ff; color: #24292e; }
+        code { background-color: #f3f3f3; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; color: #d73a49; }
+        pre { background: #2f363d; color: #c8e1ff; padding: 15px; border-radius: 6px; overflow-x: auto; }
+        pre code { color: #f6f8fa; background: none; padding: 0; }
+        .footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #586069; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Git & GitHub Quick Reference</h1>
+        <p>A scannable guide for version control basics</p>
+    </header>
+
+    <section class="grid">
+        <div class="card">
+            <h3>What is Git?</h3>
+            <p><strong>Git</strong> is a local <em>Version Control System (VCS)</em>. It tracks changes in your files, saves code history checkpoints, and helps you revert or merge code branches on your computer.</p>
+        </div>
+        <div class="card">
+            <h3>What is GitHub?</h3>
+            <p><strong>GitHub</strong> is a cloud-based platform. It hosts your remote Git repositories online, allowing teams to collaborate, back up local work, manage issues, and review code.</p>
+        </div>
+    </section>
+
+    <h2>Essential Git Commands</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>git init</code></td>
+                <td>Initializes a new local Git repository in the current folder.</td>
+            </tr>
+            <tr>
+                <td><code>git status</code></td>
+                <td>Shows untracked, modified, or staged files.</td>
+            </tr>
+            <tr>
+                <td><code>git add &lt;file&gt;</code></td>
+                <td>Stages a specific file. Use <code>git add .</code> to stage all changes.</td>
+            </tr>
+            <tr>
+                <td><code>git commit -m "msg"</code></td>
+                <td>Saves staged changes to your history with a descriptive message.</td>
+            </tr>
+            <tr>
+                <td><code>git branch -M main</code></td>
+                <td>Renames your default branch to "main".</td>
+            </tr>
+            <tr>
+                <td><code>git log</code></td>
+                <td>Displays your repository's commit history details.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Standard Remote Workflow</h2>
+    <p>To hook up a local repository to GitHub and publish your code, run these terminal commands in order:</p>
+    <pre><code># 1. Initialize local repository
+git init
+
+# 2. Stage your files
+git add .
+
+# 3. Commit your changes
+git commit -m "Initial commit"
+
+# 4. Point to your remote GitHub repository URL
+git remote add origin https://github.com
+
+# 5. Push your code up to the server
+git push -u origin main</code></pre>
+
+    <h2>Collaboration Commands</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>git clone &lt;url&gt;</code></td>
+                <td>Downloads an existing remote repository onto your computer.</td>
+            </tr>
+            <tr>
+                <td><code>git pull</code></td>
+                <td>Fetches and downloads updates from GitHub directly into your current branch.</td>
+            </tr>
+            <tr>
+                <td><code>git checkout -b &lt;name&gt;</code></td>
+                <td>Creates and immediately switches to a new feature branch.</td>
+            </tr>
+            <tr>
+                <td><code>git merge &lt;branch&gt;</code></td>
+                <td>Combines another branch's changes into your active branch.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>Learn more at the official <a href="https://git-scm.com/" target="_blank">Git Website</a> or <a href="https://docs.github.com/" target="_blank">GitHub Docs</a>.</p>
+    </div>
+
+</body>
+</html>
