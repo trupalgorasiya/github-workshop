@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Login</title>
+</head>
+<body>
+
+    <!-- Main login container block -->
+    <div class="login-container">
+        <h2>Account Login</h2>
+        
+        <!-- Form submission settings (replace login_handler with your backend endpoint) -->
+        <form action="/login_handler" method="POST">
+            
+            <!-- Username/Email Field Group -->
+            <div class="form-group">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            
+            <!-- Password Field Group -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            
+            <!-- Form Action Control -->
+            <button type="submit">Log In</button>
+            
+        </form>
+    </div>
+
+</body>
+</html>
